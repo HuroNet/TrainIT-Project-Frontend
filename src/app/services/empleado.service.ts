@@ -13,6 +13,8 @@ export class EmpleadoService {
 
   getAll(): Observable<Empleado[]> {
     console.log('Fetching all empleados from API');
+    const empleados = this.http.get<Empleado[]>(this.API_URL)
+    console.log(empleados);
     return this.http.get<Empleado[]>(this.API_URL);
   }
 
@@ -25,7 +27,8 @@ export class EmpleadoService {
   }
 
   update(id: number, empleado: Partial<Empleado>): Observable<Empleado> {
-    return this.http.put<Empleado>(`${this.API_URL}/${id}`, empleado);
+    console.log(`Updating empleado with ID: ${id}`,empleado);
+    return this.http.patch<Empleado>(`${this.API_URL}/${id}`, empleado);
   }
 
   delete(id: number): Observable<void> {
