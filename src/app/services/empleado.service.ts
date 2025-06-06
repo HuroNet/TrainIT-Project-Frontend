@@ -12,6 +12,7 @@ export class EmpleadoService {
   constructor(private readonly http: HttpClient) {}
 
   getAll(): Observable<Empleado[]> {
+    console.log('Fetching all empleados from API');
     return this.http.get<Empleado[]>(this.API_URL);
   }
 

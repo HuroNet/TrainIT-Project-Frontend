@@ -7,6 +7,8 @@ import {  MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { EmpleadosComponent } from '../../pages/empleados/empleados.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
+    EmpleadosComponent,
+    HttpClientModule,
   ],
   exports: [
     CommonModule,
@@ -28,6 +32,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
+    EmpleadosComponent,
+    HttpClientModule
   ]
 })
 export class SharedModule {}
