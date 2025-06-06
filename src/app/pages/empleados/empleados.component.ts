@@ -36,7 +36,7 @@ export class EmpleadosComponent implements OnInit {
   ngOnInit(): void {
     this.cargarEmpleados();
   }
-  
+
   cargarEmpleados() {
     this.empleadoService.getAll().subscribe({
       next: (data) => (this.empleados = data),
