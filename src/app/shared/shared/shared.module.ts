@@ -1,30 +1,33 @@
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {  MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule,
-    MatTableModule,
-    MatButtonModule,
-    MatIconModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatDialogModule,
-    MatSnackBarModule,
+    MatButtonModule,
+    MatTableModule,
+    MatIconModule,
   ],
   exports: [
     CommonModule,
-    HttpClientModule,
-    MatTableModule,
-    MatButtonModule,
-    MatIconModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatDialogModule,
-    MatSnackBarModule,
+    MatButtonModule,
+    MatTableModule,
+    MatIconModule,
   ]
 })
 export class SharedModule {}
