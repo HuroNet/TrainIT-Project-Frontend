@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>
+  {{ esEditar ? 'Editar Empleado' : 'Crear Empleado' }}
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="guardar()" mat-dialog-content>
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" />
+    <mat-error *ngIf="form.get('nombre')?.hasError('required')">
+      El nombre es requerido
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error *ngIf="form.get('email')?.hasError('email')">
+      Email inválido
+    </mat-error>
+    <mat-error *ngIf="form.get('email')?.hasError('required')">
+      El email es requerido
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Cargo</mat-label>
+    <input matInput formControlName="cargo" />
+    <mat-error *ngIf="form.get('cargo')?.hasError('required')">
+      El cargo es requerido
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Salario</mat-label>
+    <input matInput type="number" formControlName="salario" />
+    <mat-error *ngIf="form.get('salario')?.hasError('required')">
+      El salario es requerido
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-full">
+  <mat-label>Departamento</mat-label>
+  <mat-select formControlName="departamentoId">
+    <mat-option *ngFor="let dep of departamentos" [value]="dep.id">
+      {{ dep.nombre }}
+    </mat-option>
+  </mat-select>
+  <mat-error *ngIf="form.get('departamentoId')?.hasError('required')">
+    El departamento es requerido
+  </mat-error>
+</mat-form-field>
+
+  <mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="cancelar()">Cancelar</button>
+    <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">
+      {{ esEditar ? 'Actualizar' : 'Crear' }}
+    </button>
+  </mat-dialog-actions>
+</form>
