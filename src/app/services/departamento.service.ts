@@ -16,4 +16,7 @@ export class DepartamentoService {
     console.log("aquiooooooooo",Departamentos);
     return this.http.get<Departamento[]>(this.apiUrl);
   }
+  crear(departamento: Departamento): Observable<Departamento> {
+  return this.http.post<Departamento>(this.apiUrl, departamento);
+}
 }

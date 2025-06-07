@@ -8,11 +8,12 @@ import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog.c
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { DepartamentoFormComponent } from '../../components/departamento-form/departamento-form.component';
 
 @Component({
   selector: 'app-empleados',
   standalone: true,
-  imports: [SharedModule, MatSelectModule,MatOptionModule],
+  imports: [SharedModule, MatSelectModule, MatOptionModule],
   providers: [EmpleadoService],
   templateUrl: './empleados.component.html',
   styleUrls: ['./empleados.component.scss'],
@@ -118,4 +119,14 @@ export class EmpleadosComponent implements OnInit {
       }
     });
   }
+ abrirFormularioDepartamento() {
+  this.dialog
+    .open(DepartamentoFormComponent)
+    .afterClosed()
+    .subscribe((refrescar) => {
+      if (refrescar) {
+        console.log('Departamento creado correctamente');
+      }
+    });
+}
 }
