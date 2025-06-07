@@ -3,7 +3,7 @@ import { SharedModule } from '../../shared/shared/shared.module';
 import { EmpleadoService } from '../../services/empleado.service';
 import { Empleado } from '../../models/empleado.model';
 import { MatDialog } from '@angular/material/dialog';
-import { EmpleadoFormComponent } from './empleado-form/empleado-form.component';
+import { EmpleadoFormComponent } from '../../components/empleado-form/empleado-form.component';
 import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
