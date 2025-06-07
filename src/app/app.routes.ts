@@ -9,10 +9,3 @@ export const routes: Routes = [
 
 
 
-// import { PruebaComponent } from './prueba/prueba.component';
-// import { PipesComponent } from './pipes/pipes.component';
-
-// export const routes: Routes = [
-//   { path: '', component: PruebaComponent },
-//   { path: 'ruta2', component: PipesComponent },
-// ];
