@@ -1,10 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Empleado } from '../../../models/empleado.model';
-import { SharedModule } from '../../../shared/shared/shared.module';
-import { DepartamentoService } from '../../../services/departamento.service';
-import { Departamento } from '../../../models/departamento.model';
+import { Empleado } from '../../models/empleado.model';
+import { SharedModule } from '../../shared/shared/shared.module';
+import { DepartamentoService } from '../../services/departamento.service';
+import { Departamento } from '../../models/departamento.model';
 
 @Component({
   standalone: true,

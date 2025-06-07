@@ -7,13 +7,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DepartamentoService {
-  private readonly apiUrl = 'http://localhost:3000/departamentos'; 
+  private readonly apiUrl = 'http://localhost:3000/departamentos';
 
   constructor(private readonly http: HttpClient) {}
 
   getAll(): Observable<Departamento[]> {
-    const Departamentos = this.http.get<Departamento[]>(this.apiUrl);
-    console.log("aquiooooooooo",Departamentos);
     return this.http.get<Departamento[]>(this.apiUrl);
+  }
+  crear(departamento: Departamento): Observable<Departamento> {
+    return this.http.post<Departamento>(this.apiUrl, departamento);
   }
 }
