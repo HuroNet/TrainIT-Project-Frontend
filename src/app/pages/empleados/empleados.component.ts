@@ -6,11 +6,13 @@ import { MatDialog } from '@angular/material/dialog';
 import { EmpleadoFormComponent } from './empleado-form/empleado-form.component';
 import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-empleados',
   standalone: true,
-  imports: [SharedModule],
+  imports: [SharedModule, MatSelectModule,MatOptionModule],
   providers: [EmpleadoService],
   templateUrl: './empleados.component.html',
   styleUrls: ['./empleados.component.scss'],

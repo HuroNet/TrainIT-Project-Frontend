@@ -9,7 +9,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { EmpleadosComponent } from '../../pages/empleados/empleados.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   imports: [
     CommonModule,
@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     EmpleadosComponent,
     HttpClientModule,
+    MatSelectModule,
   ],
   exports: [
     CommonModule,
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatIconModule,
     EmpleadosComponent,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
   ]
 })
 export class SharedModule {}
