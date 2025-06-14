@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { DepartamentoFormComponent } from '../../components/departamento-form/departamento-form.component';
 
+
 @Component({
   selector: 'app-empleados',
   standalone: true,

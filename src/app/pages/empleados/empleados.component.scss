@@ -41,3 +41,25 @@ button.mat-raised-button {
   font-weight: 600;
 }
 
+//foooter 
+.footer {
+  width: 100%;
+  background-color: #e0e0e0; // Diferente al fondo general (#f9f9f9)
+  padding: 29px 0;
+  margin-top: auto;
+  text-align: center;
+  font-size: 1rem;
+  color: #424242;
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    flex-wrap: wrap;
+  }
+
+  .footer-text {
+    font-weight: 500;
+  }
+}
