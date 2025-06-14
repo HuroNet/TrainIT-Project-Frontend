@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmpleadoService {
-  private readonly API_URL = 'http://localhost:3000/empleados'; 
+  private readonly API_URL = 'https://trainit-project-backend.onrender.com/empleados';
+   
 
   constructor(private readonly http: HttpClient) {}
 

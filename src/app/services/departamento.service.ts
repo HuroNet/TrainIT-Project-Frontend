@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DepartamentoService {
-  private readonly apiUrl = 'http://localhost:3000/departamentos';
+  private readonly apiUrl = 'https://trainit-project-backend.onrender.com/departamentos';
+
 
   constructor(private readonly http: HttpClient) {}
 
